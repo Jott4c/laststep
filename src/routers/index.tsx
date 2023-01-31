@@ -1,20 +1,16 @@
 import { Route, Routes, Navigate } from "react-router-dom";
-import Contact from "../Pages/Contact";
-import LaningPage from "../Pages/LaningPage";
-import Register from "../Pages/Register";
-import Dashboard from "./../Pages/Dashboard/index";
-import Login from "./../Pages/Login/index";
+import Contact from "../pages/Contact";
+import LaningPage from "../pages/LaningPage";
+import Register from "../pages/Register";
+import Dashboard from "../pages/Dashboard/index";
+import Login from "../pages/Login/index";
 import { useContext, useEffect } from "react";
 import { UserContext } from "../providers/UserContext";
-import About from "../Pages/About";
+import About from "../pages/About";
 import userEvent from "@testing-library/user-event";
 
 export default function MyRoute() {
-  const { getUser, user } = useContext(UserContext)
-  useEffect(() => {
-    getUser()
-  })
-
+  const { user } = useContext(UserContext)
 
   return (
     <Routes>

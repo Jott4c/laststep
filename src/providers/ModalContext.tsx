@@ -1,5 +1,11 @@
-import { createContext, Dispatch, SetStateAction, useState } from "react";
-import { IUser } from "./UserContext";
+import {
+  createContext,
+  Dispatch,
+  SetStateAction,
+  useContext,
+  useState,
+} from "react";
+import { IUser, UserContext } from "./UserContext";
 
 interface AuthProviderData {
   modal: boolean;
@@ -35,10 +41,20 @@ export const ModalProvider = ({ children }: AuthProviderProps) => {
   const [openModalEditPefil, setOpenModalEditPerfil] = useState(false);
   const [openModalProfilePic, setOpenModalProfilePic] = useState(false);
 
-  function modalMaisInfo(user: IUser, isOpen: boolean) {
+  const { user, socket } = useContext(UserContext);
+
+  const modalMaisInfo = (userReceived: IUser, isOpen: boolean) => {
+    const userA = userReceived.email;
+    const userB = user.email;
+    const data = {
+      userA,
+      userB,
+    };
+    socket.emit("selectRoom", data);
+
     setOpenModalSend(isOpen);
-    setUserReceived(user);
-  }
+    setUserReceived(userReceived);
+  };
 
   return (
     <ModalContext.Provider
