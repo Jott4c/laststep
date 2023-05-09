@@ -19,7 +19,7 @@ const CardPaciente = ({ userData }: Iprops) => {
         </p>
         <span>
           <strong>
-            {userData.user_type === "Patient" ? "Condição:" : "Especialidade:"}
+            {userData.user_type === "P" ? "Condição:" : "Especialidade:"}
           </strong>
           {userData.skills || userData.diseases}
         </span>

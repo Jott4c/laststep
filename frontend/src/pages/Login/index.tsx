@@ -83,7 +83,7 @@ const Login = () => {
             <input
               type="text"
               id="email"
-              placeholder="exemplo@email.com"
+              placeholder="username"
               {...register("username")}
             />
             <label htmlFor="password">Senha</label>

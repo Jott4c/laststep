@@ -30,19 +30,21 @@ body, html {
     overflow-x: hidden;
 }
 
-body::-webkit-scrollbar {
+&::-webkit-scrollbar {
   width: 12px;              
 }
 
-body::-webkit-scrollbar-track {
-  background: transparent;        
+&::-webkit-scrollbar-track {
+    background: transparent;  
 }
 
-body::-webkit-scrollbar-thumb {
+&::-webkit-scrollbar-thumb {
   background-color: #4984E8;    
   border-radius: 20px;       
   border: 3px solid white;  
 }
+
+
 
 
  li {

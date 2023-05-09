@@ -12,20 +12,22 @@ export const ContentForm = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  overflow: auto;
 
   @media (max-width: 700px) {
-     width: 100%;
+    width: 100%;
   }
   div {
-    width: 290px;
+    margin-top: 2rem;
+    height: 100vh;
+
     > img {
       margin-bottom: 30px;
     }
-    .link{
-        color: var(--color-primary);
-        text-decoration: none;
-      }
+    .link {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
     form {
       display: flex;
       flex-direction: column;
@@ -46,15 +48,15 @@ export const ContentForm = styled.div`
         padding: 0 10px;
       }
       input::-webkit-input-placeholder {
-        font-size:11px;
+        font-size: 11px;
       }
       input:-moz-placeholder {
-        font-size:12px;
+        font-size: 12px;
       }
       input:focus::-moz-placeholder {
         font-size: 12px;
       }
-      
+
       > button {
         height: 32px;
         border-radius: 4px;
@@ -83,23 +85,20 @@ export const ContentForm = styled.div`
           color: var(--color-primary);
         }
       }
-      p{
+      p {
         color: var(--color-contrast);
         font-size: 10px;
       }
-
-      
     }
     .link {
-        text-decoration: none;
-        justify-content: center;
+      text-decoration: none;
+      justify-content: center;
 
-        margin-top: 20px;
-
-         font-style: normal;
+      margin: 1rem 1rem;
+      font-style: normal;
       font-weight: 500;
-      font-size: 14px;
-      line-height: 15px;
+      font-size: 1rem;
+      line-height: 1rem;
 
       display: flex;
       align-items: center;
@@ -120,11 +119,8 @@ export const ContentBackground = styled.div`
     overflow: hidden;
     object-fit: cover;
   }
-  
-  @media (max-width: 700px) {
-     display: none;
-  }
-    
-  
-`;
 
+  @media (max-width: 700px) {
+    display: none;
+  }
+`;

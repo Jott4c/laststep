@@ -12,6 +12,8 @@ const ModalReceivedMessage = () => {
 
   const { rooms, user, socket } = useContext(UserContext);
 
+  console.log(rooms);
+
   function handleShowMsg(room: IRoom) {
     const userA = room.userA;
     const userB = room.userB;
@@ -39,20 +41,25 @@ const ModalReceivedMessage = () => {
           </div>
           <div className="body-msg">
             <ul>
-              {rooms.map((room) => (
-                <li key={room._id}>
-                  <div>
-                    {" "}
-                    <p>De:</p>
-                    <button
-                      className="btn-name"
-                      onClick={() => handleShowMsg(room)}
-                    >
-                      {user.email === room.userA ? room.userB : room.userA}
-                    </button>
-                  </div>
-                </li>
-              ))}
+              {rooms
+                .sort(
+                  (a, b) =>
+                    (b.messages[0].createDate as any) -
+                    (a.messages[0].createDate as any)
+                )
+                .map((room) => (
+                  <li key={room._id}>
+                    <div>
+                      <p>De:</p>
+                      <button
+                        className="btn-name"
+                        onClick={() => handleShowMsg(room)}
+                      >
+                        {user.email === room.userA ? room.userB : room.userA}
+                      </button>
+                    </div>
+                  </li>
+                ))}
             </ul>
           </div>
         </Modal>
