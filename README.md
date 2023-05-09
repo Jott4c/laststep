@@ -6,9 +6,9 @@ O LastStep é um projeto que tem como objetivo facilitar o processo de busca por
 
 A plataforma utiliza as seguintes tecnologias:
 
-Backend: Python com o framework Django e o banco de dados PostgreSQL.
-Sistema de chat: Node.js, MongoDB e Socket.io.
-Frontend: React.
+- **Backend:** Python com o framework Django e o banco de dados PostgreSQL.
+- **Sistema de chat:** Node.js, MongoDB e Socket.io.
+- **Frontend:** React.
 
 ## Funcionalidades
 
