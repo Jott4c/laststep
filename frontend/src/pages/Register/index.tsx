@@ -57,9 +57,11 @@ const Register = () => {
 
     try {
       const response = await api.post("users/", data);
+      console.log(response);
       if (response.status === 201) {
         navigate("/login");
       }
+
       toast.update(toastId, {
         render: "Registro realizado com sucesso",
         type: toast.TYPE.SUCCESS,
