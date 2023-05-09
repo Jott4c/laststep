@@ -1,4 +1,4 @@
-# Projeto LastStep - Encontrando o cuidado certo para o seu ente querido
+# Projeto LastStep - Encontrando o cuidador certo para o seu ente querido
 
 O LastStep é um projeto que tem como objetivo facilitar o processo de busca por cuidadores e profissionais de saúde para ajudar na assistência de entes queridos. A plataforma oferece uma variedade de recursos, incluindo busca por profissionais de saúde, gerenciamento de perfis, sistema de chat e outras funcionalidades importantes para tornar a busca por cuidados mais eficiente.
 
